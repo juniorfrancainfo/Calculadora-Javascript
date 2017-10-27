@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		font-family: sans-serif;
+		color: #fff;
+		background-color: #ccc;
+	}
+	form{
+		width: 220px;
+		margin: auto;
+		margin-top: 140px;
+		background-color: #CC082E;
+		border: 1px solid #222;
+		padding: 5px;
+		border-radius: 3px;
+	}
+	legend{
+		font-size: 20px;
+	}
+	input{
+		border-radius: 2px;
+		padding: 5px;
+	}
+	a{
+		text-decoration: none;
+		background-color: #4B8AE0;
+		padding: 5px;
+		border-radius: 3px;
+	}
+	</style>
+</head>
+<body>
+	
+	<form action="" id="formulario" method="post">
+		<fieldset>
+			<legend>Calculadora</legend>
+			Valor 1: <input type="text" name="v1"><br>
+			Valor 2: <input type="text" name="v2"><br><br>
+			Digite a operação: <br>
+			Ex: (+ - * /)<br>
+			<input type="text" name="op" size="1" maxlength="1"><br><br>
+
+			<a href="#" onclick="calc();">Calcular</a><br><br>
+
+			Resposta: <br>
+			<input type="text" name="resp">
+		</fieldset>
+	</form>
+
+	<script>
+		function calc(){
+			document.getElementById("formulario");
+			var v1 = parseInt(formulario.v1.value);
+			var v2 = parseInt(formulario.v2.value);
+			var op = (formulario.op.value);
+						
+			if(op == "+"){
+				var resp = v1 + v2;
+				formulario.resp.value = resp;
+			}else if(op == "-"){
+				var resp = v1 - v2;
+				formulario.resp.value = resp;
+			}else if(op == "*"){
+				var resp = v1 * v2;
+				formulario.resp.value = resp;
+			}else if(op == "/"){
+				var resp = v1 / v2;
+				formulario.resp.value = resp;
+			}else{
+				alert("Valor inválido, digite correto \nSoma + \nSubtração - \nMultiplicação * \nDivisão /");
+			}
+
+		}
+	</script>
+
+</body>
+</html>
